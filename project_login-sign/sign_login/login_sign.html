@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./login.css">
+<link rel="stylesheet" href="./sign.css">
+</head>
+<body>
+  <!-- ----------------------------------- LOGIN--------------------------------------------------------- -->
+  <div id="content">
+    <header class="nameShop">
+      <p class="heading">TH Gaming Gear Shop</p>
+    </header>
+
+    <section id="id01" class="modal">
+      
+      <form class="modal-content animate" action="/index.html" >
+
+        <div class="container">
+          <label for="uname"><b>Tài khoản</b></label>
+          <input id="login_user" type="text" placeholder="Nhập tài khoản" name="uname" required>
+
+          <label for="psw"><b>Mật khẩu</b></label>
+          <input id="login_psw"type="password" placeholder="Nhập mật khẩu" name="psw" required>
+          <span id="TB" style="color: red;"></span>
+          <hr>
+
+          <button class="btn_login" type="submit" style="border-radius: 5px;">Đăng nhập</button>
+          <hr style="background-color: gray;">
+          
+          <div class="col">
+            <a href="https://www.facebook.com/" class="fb btn">
+              <i class="fa fa-facebook fa-fw"></i>Facebook
+            </a>
+            <a href="https://twitter.com/" class="twitter btn">
+              <i class="fa fa-twitter fa-fw"></i>Twitter
+            </a>
+            <a href="https://plus.google.com/" class="google btn"><i class="fa fa-google fa-fw">
+              </i>Google+
+            </a>
+          </div>
+          <button type="button" onclick="document.getElementById('sign-id01').style.display='block'" class="btnSign">Đăng ký</button>
+        </div>
+
+      </form>
+      
+    </section>
+
+    <footer class="noteStore">Thỏa sức mua phụ kiện chơi game giá tốt, chất lượng cao tại TH Gaming Gear Shop</footer>
+
+  </div>
+
+<!-- --------------------------------SIGN----------------------------------------------------------------------- -->
+
+<div>
+
+    <div id="sign-id01" class="sign-modal">
+      <span onclick="document.getElementById('sign-id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <form class="sign-modal-content" >
+        <div class="sign-container">
+          <h1 style="text-align: center; margin: 10px;">ĐĂNG KÝ</h1>
+          <p>Điền các thông tin sau để đăng ký tài khoản</p>
+
+          <hr>
+
+          <label for="name"><b>Họ và tên</b></label>
+          <input class="input_sign" type="text" placeholder="Nhập Họ và tên" name="name" pattern="[A-Za-z\ ]*" required>
+          <span class="demo"></span><br><br>
+
+          <label for="phone"><b>Số điện thoại</b></label>
+          <input class="input_sign" type="text" placeholder="Nhập số điện thoại" name="Phone" pattern="[0-9]{10,}" required>
+          <span class="demo"></span><br><br> 
+
+          <label for="username"><b>Tài khoản</b></label>
+          <input class="input_sign" type="text" placeholder="Nhập tài khoản" name="username"  pattern=".{6,}" required>
+          <span class="demo"></span><br><br>  
+
+          <label for="psw"><b>Mật khẩu</b></label>
+          <input class="input_sign" type="password" placeholder="Nhập mật khẩu" name="psw" pattern=".{6,}" required>
+          <span class="demo"></span><br><br>  
+
+          <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
+          <input class="input_sign" type="password" placeholder="Nhập lại mật khẩu" name="psw-repeat" required>
+          <span class="demo"></span><br><br>
+
+          <input class="input_sign" type="checkbox" name="remember" style="margin-bottom:15px" required>
+    
+          <span>Khi tạo mật khẩu, bạn đồng ý với <a href="#" style="color:dodgerblue">Chính sách và Quyền riêng tư</a>.</span>
+    
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('sign-id01').style.display='none'" class="cancelbtn">Hủy</button>
+            <button type="submit" class="signupbtn">Đăng ký</button>
+          </div>
+        </div>  
+      </form>
+    </div>
+</div>
+<script src="./login_sign.js"></script>
+
+</body>
+</html>
